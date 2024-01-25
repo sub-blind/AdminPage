@@ -205,7 +205,7 @@
                     seconds = seconds < 10
                         ? '0' + seconds
                         : seconds;
-                    var dateString = year + '-' + month + '-' + day + ' ' + dayOfWeek;
+                    var dateString = year + '-' + month + '-' + day + ' ' + dayOfWeek + ' ';
                     var timeString = hours + ':' + minutes + ':' + seconds;
                     var clockElement = document.getElementById('clock');
                     clockElement.innerHTML = dateString + timeString;
