@@ -58,35 +58,16 @@
                             <th scope="col">가격</th>
                         </tr>
                     </thead>
-                    <tbody class="table-group-divider">
-                        <tr>
-                            <th scope="row">상의</th>
-                            <td>남녀혼용</td>
-                            <td>Supreme</td>
-                            <td>슈프림 박스로고 후드티</td>
-                            <td>390,000</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">하의</th>
-                            <td>남녀혼용</td>
-                            <td>DIESEL</td>
-                            <td>디젤 트랙 팬츠</td>
-                            <td>188,000</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">신발</th>
-                            <td>남녀혼용</td>
-                            <td>Nike</td>
-                            <td>에어포스 1</td>
-                            <td>137,000</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">패션잡화</th>
-                            <td>남녀혼용</td>
-                            <td>Music&Goods</td>
-                            <td>빵빵이 키링</td>
-                            <td>29,000</td>
-                        </tr>
+                    <tbody id="data-table">
+                        {% for i in data_list %}
+                            <tr>
+                                <td>{{ i[0] }}</td>
+                                <td>{{ i[1] }}</td>
+                                <td>{{ i[2] }}</td>
+                                <td>{{ i[3] }}</td>
+                            </tr>
+                        {% endfor %}
+                        <!-- 추후 크롤링한 데이터가 들어가는 자리 -->
                     </tbody>
                 </table>
             </div>
