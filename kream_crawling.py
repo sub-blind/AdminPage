@@ -95,22 +95,6 @@ for i in items:
             num += 1
 
 
-keywords = ["백", "팩"]
-
-for i in items:
-    product_name = i.select_one(".translated_name")
-
-    for keyword in keywords:
-        if keyword in product_name.text:
-            category = "가방"
-            product_brand = i.select_one(".product_info_brand.brand").text
-            product_name_hood = product_name.text
-            product_price = i.select_one(".amount").text
-
-            print(num, product_name_hood, product_price)
-            item = [category, product_brand, product_name_hood, product_price]
-            product_list.append(item)
-            num += 1
 driver.quit()
 
 conn = pymysql.connect(
